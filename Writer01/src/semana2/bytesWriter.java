@@ -27,7 +27,7 @@ public class bytesWriter {
         //.append ("hola"); diferencia es q puede encadenar
         */
         
-        try (FileOutputStream fos = new FileOutputStream("Z:\\estudiantes3.txt")) {
+        try (FileOutputStream fos = new FileOutputStream("Z:\\estudiantes3.txt", true)) {
             String mensaje = "Hola, esto es un stream con bytes con FIS Y FOS\n"; //.append ("hola");
             byte datos [] = mensaje.getBytes();
             fos.write (datos);
