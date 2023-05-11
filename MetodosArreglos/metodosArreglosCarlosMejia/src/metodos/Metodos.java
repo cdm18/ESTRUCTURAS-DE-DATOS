@@ -23,8 +23,8 @@ public class Metodos {
         return arreglo;
     }
 
-    public static int[] escribirDatos(int [] arreglo) {
-        
+    public static int[] escribirDatos(int[] arreglo) {
+
         for (int i = 0; i < arreglo.length; i++) {
             System.out.print("Ingrese un numero: ");
             arreglo[i] = sc.nextInt();
@@ -33,7 +33,7 @@ public class Metodos {
         return arreglo;
     }
 
-    public static void imprimir(int[] arreglo ) {
+    public static void imprimir(int[] arreglo) {
         for (int i = 0; i < arreglo.length; i++) {
             System.out.print(" " + arreglo[i]);
         }
@@ -44,7 +44,7 @@ public class Metodos {
         for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] == index) {
                 System.out.printf("El numero %d se encuentra en la"
-                        + " posicion [%d] del arreglo\n",arreglo [i] , i);
+                        + " posicion [%d] del arreglo\n", arreglo[i], i);
                 return i;
             }
 
@@ -53,11 +53,11 @@ public class Metodos {
         return -1;
     }
 
-    public static void eliminar(int[] arreglo, int index) {
-        int pos = index;
-        if (pos != -1) {
-            for (int i = pos; i < arreglo.length - 1; i++) {
-                i = arreglo[i + 1];
+    public static void eliminar(int[] arreglo, int numeroEliminar) {
+        int numero = busqueda (arreglo, numeroEliminar) ;
+        if (numero != -1) {
+            for (int i = numero; i < arreglo.length - 1; i++) {
+               arreglo[i] = arreglo[i + 1];
             }
             arreglo[arreglo.length - 1] = 0;
             System.out.println("El elemento fue eliminado");
@@ -65,13 +65,12 @@ public class Metodos {
             System.out.println("El elemento no existe");
         }
     }
-    
-    
+
     public static int[] burbuja(int[] array) {
         int aux;
         int orden[];
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length-1; j++) {
+            for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     aux = array[j];
                     array[j] = array[j + 1];
@@ -83,39 +82,32 @@ public class Metodos {
         orden = array;
         return orden;
     }
-    
-    
-    
-    
+
     // ------------------------------------------------------
-    
-    public static void quickSort (int arr [], int begin, int end) {
+    public static void quickSort(int arr[], int begin, int end) {
         if (begin < end) {
-            int partitionIndex = partition (arr, begin, end);
-            quickSort (arr, begin, partitionIndex-1);
-            quickSort(arr, partitionIndex+1, end);
+            int partitionIndex = partition(arr, begin, end);
+            quickSort(arr, begin, partitionIndex - 1);
+            quickSort(arr, partitionIndex + 1, end);
         }
-        
+
     }
-    
-    private static int partition (int arr [], int begin, int end){
-        int pivot = arr [end];
-        int i = (begin-1);
+
+    private static int partition(int arr[], int begin, int end) {
+        int pivot = arr[end];
+        int i = (begin - 1);
         for (int j = begin; j < end; j++) {
-             if (arr[j] <= pivot) {
+            if (arr[j] <= pivot) {
                 i++;
                 int swapTemp = arr[i];
-                arr [i] = arr [j];
-                arr [j] = swapTemp;
+                arr[i] = arr[j];
+                arr[j] = swapTemp;
             }
         }
-        int swapTemp = arr [i + 1];
-        arr [i + 1] = arr [end];
-        arr [end] = swapTemp;
-        return i+1;
+        int swapTemp = arr[i + 1];
+        arr[i + 1] = arr[end];
+        arr[end] = swapTemp;
+        return i + 1;
     }
-    
-    
-    
 
 }
