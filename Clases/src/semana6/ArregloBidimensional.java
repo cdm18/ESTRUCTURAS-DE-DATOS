@@ -8,7 +8,7 @@ import static semana6.Metodo.*;
 
 /**
  *
- * @author SALA I
+ * @author CARLOS MEJIA 
  */
 public class ArregloBidimensional {
 

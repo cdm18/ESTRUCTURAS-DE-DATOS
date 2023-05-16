@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author SALA I
+ * @author CARLOS MEJIA 
  */
 public class Metodo {
 
