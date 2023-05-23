@@ -4,8 +4,8 @@
  */
 package semana7;
 
-import java.util.Stack;
-import java.util.Queue;
+import java.util.Stack;//
+import java.util.Queue;//
 import java.util.Scanner;
 
 /**
