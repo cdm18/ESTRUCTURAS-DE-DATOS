@@ -76,7 +76,7 @@ public class Metodos {
                     array[j] = array[j + 1];
                     array[j + 1] = aux;
                 }
-
+                
             }
         }
         orden = array;
@@ -86,22 +86,22 @@ public class Metodos {
     // ------------------------------------------------------
     public static void quickSort(int arr[], int begin, int end) {
         if (begin < end) {
-            int partitionIndex = partition(arr, begin, end);
+            int partitionIndex = partition(arr, begin, end); 
             quickSort(arr, begin, partitionIndex - 1);
             quickSort(arr, partitionIndex + 1, end);
         }
 
     }
-
+    // 10,5,15  3 elementos  begin = 0  end = array.length -1 = 2
     private static int partition(int arr[], int begin, int end) {
-        int pivot = arr[end];
+        int pivot = arr[end]; 
         int i = (begin - 1);
         for (int j = begin; j < end; j++) {
-            if (arr[j] <= pivot) {
-                i++;
+            if (arr[j] <= pivot) { 
+                i++; // 
                 int swapTemp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = swapTemp;
+                arr[i] = arr[j]; 
+                arr[j] = swapTemp; 
             }
         }
         int swapTemp = arr[i + 1];
