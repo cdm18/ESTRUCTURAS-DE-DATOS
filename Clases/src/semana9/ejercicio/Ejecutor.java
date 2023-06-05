@@ -29,6 +29,6 @@ public class Ejecutor {
         objB.concatenarNext(objC);
         System.out.println("Next B: " + objB.next);
         System.out.println("Next C: " + objC.next);
-
+        System.out.println("");
     }
 }
