@@ -6,7 +6,7 @@ package semana9.ejercicio;
 
 /**
  *
- * @author SALA I
+ * @author carlos M
  */
 public class Ejecutor {
 

@@ -6,7 +6,7 @@ package semana9;
 
 /**
  *
- * @author SALA I
+ * @author carlos M
  */
 public class Persona {
     String nombre;
