@@ -26,6 +26,7 @@ public class Nodo {
     
     public void concatenarNext(Nodo nod){
         next = nod;
+                
     }
     
 }
