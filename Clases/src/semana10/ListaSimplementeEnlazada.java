@@ -48,5 +48,37 @@ public class ListaSimplementeEnlazada {
         
         System.out.println("");
     }
-
+    
+    public ListaSimplementeEnlazada delete (ListaSimplementeEnlazada list, int key){
+        // key is the deleting number
+        // Node currentNode = list.head, prev = null;
+        
+        Node currentNode = list.head;
+        Node previous = null;
+        
+        if (currentNode != null && currentNode.data == key) {
+            list.head = currentNode.next;
+            
+            System.out.println(key + " found and deleted");
+            return list;
+            
+        }
+        
+        while (currentNode != null && currentNode.data != key){
+            previous = currentNode;
+            currentNode = currentNode.next;           
+        }
+        
+        if (currentNode != null) {
+            previous.next = currentNode.next;
+            System.out.println(key + " found and deleted");
+        }
+        
+        if (currentNode == null) {
+            System.out.println(key + " not found");
+        }
+        
+        return list;
+    }
+  
 }
