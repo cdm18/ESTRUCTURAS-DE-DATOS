@@ -39,9 +39,14 @@ public class ListaSimplementeEnlazada {
     }
 
     public void print(ListaSimplementeEnlazada list) {
-
+        Node currentNode = list.head;
+        System.out.println("Lista enlazada simple: ");
+        while(currentNode != null){
+            System.out.printf("[%d] ", currentNode.data);
+            currentNode = currentNode.next;
+        }
         
-
+        System.out.println("");
     }
 
 }
