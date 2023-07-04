@@ -33,4 +33,48 @@ public class BinarySearchTree {
         root = addRecursive(root, value);
     }
 
+    public Node deleteRecursive(Node current, int value) {
+        if (current == null) {
+            return null;
+        }
+
+        if (value == current.value) {
+            //when the node is a leaf node            
+            if (current.left == null && current.right == null) {
+                return null;
+            }
+            // the case when the node has one child
+            if (current.right == null) {
+                return current.left;
+            }
+            if (current.left == null) {
+                return current.right;
+            }
+
+            int smallestValue = findSmallestValue(current.right); // menor de los mayores
+            current.value = smallestValue;
+            current.right = deleteRecursive(current.right, smallestValue);
+            return current;
+        }
+
+        if (value < current.value) {
+            current.left = deleteRecursive(current.left, value);
+            return current;
+        } else {
+            current.right = deleteRecursive(current.right, value);
+            return current;
+
+        }
+
+    }
+
+    public void delete(int value) {
+        root = deleteRecursive(root, value);
+    }
+
+    public int findSmallestValue(Node root) {
+        return root.left == null ? root.value : findSmallestValue(root.left);
+        // es un if y else de una sola linea, : significa sino
+    }
+
 }
