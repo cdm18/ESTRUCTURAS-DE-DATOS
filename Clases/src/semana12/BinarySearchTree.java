@@ -73,6 +73,15 @@ public class BinarySearchTree {
     }
 
     public int findSmallestValue(Node root) {
+        /*
+        
+        if (root.left == null) {
+            return root.value;
+        }else{
+            findSmallestValue(root.left);
+        }
+
+        */
         return root.left == null ? root.value : findSmallestValue(root.left);
         // es un if y else de una sola linea, : significa sino
     }
