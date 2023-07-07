@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-        
+
         tree.add(8);
         tree.add(10);
         tree.add(1008);
@@ -24,17 +24,23 @@ public class Main {
         tree.add(16);
         tree.add(58);
         tree.add(3);
-        tree.delete(20);   
-        
+        tree.delete(20);
+        System.out.println("");
+        System.out.println("-----------------------------------------------");
         System.out.println("Recorrido del arbol PreOrden");
         tree.traversePreOrder(tree.root);
-        
+        System.out.println("");
+        System.out.println("-----------------------------------------------");
+
         System.out.println("Recorrido del arbol EnOrden");
         tree.traverseinOrder(tree.root);
-        
+        System.out.println("");
+        System.out.println("-----------------------------------------------");
+
         System.out.println("Recorrido del arbol PostOrden");
         tree.traversePostOrder(tree.root);
-        
-        
+        System.out.println("");
+        System.out.println("-----------------------------------------------");
+
     }
 }
