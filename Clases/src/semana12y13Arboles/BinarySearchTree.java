@@ -31,6 +31,7 @@ public class BinarySearchTree {
 
     public void add(int value) {
         root = addRecursive(root, value);
+      //  System.out.printf("Numero [%d] añadido correctamente", value);
     }
 
     public Node deleteRecursive(Node current, int value) {
@@ -64,16 +65,12 @@ public class BinarySearchTree {
         } else {
             current.right = deleteRecursive(current.right, value);            
             return current;
-
         }
-        
-
     }
 
     public void delete(int value) {
         root = deleteRecursive(root, value);
-        System.out.printf("Numero [%d] eliminado\n", value);
-
+        System.out.printf("Numero [%d] eliminado", value);
     }
 
     public int findSmallestValue(Node root) {

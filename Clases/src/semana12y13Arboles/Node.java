@@ -6,7 +6,7 @@ package semana12y13Arboles;
 
 /**
  *
- * @author SALA I
+ * @author carlos mejia
  */
 public class Node {
     int value;
