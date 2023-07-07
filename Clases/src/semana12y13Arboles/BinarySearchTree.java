@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package semana12;
+package semana12y13Arboles;
 
 /**
  *
@@ -55,21 +55,25 @@ public class BinarySearchTree {
             current.value = smallestValue;
             current.right = deleteRecursive(current.right, smallestValue);
             return current;
+            
         }
 
         if (value < current.value) {
             current.left = deleteRecursive(current.left, value);
             return current;
         } else {
-            current.right = deleteRecursive(current.right, value);
+            current.right = deleteRecursive(current.right, value);            
             return current;
 
         }
+        
 
     }
 
     public void delete(int value) {
         root = deleteRecursive(root, value);
+        System.out.printf("Numero [%d] eliminado\n", value);
+
     }
 
     public int findSmallestValue(Node root) {
@@ -81,9 +85,33 @@ public class BinarySearchTree {
             findSmallestValue(root.left);
         }
 
-        */
+         */
         return root.left == null ? root.value : findSmallestValue(root.left);
         // es un if y else de una sola linea, : significa sino
+    }
+
+    public void traversePreOrder(Node node) { // raiz, izquierda, derecha
+        if (node != null) {
+            System.out.printf("[%d] ", node.value);
+            traversePreOrder(node.left);
+            traversePreOrder(node.right);
+        }
+    }
+
+    public void traverseinOrder(Node node) { // izquierda, raiz,  derecha
+        if (node != null) {
+            traverseinOrder(node.left);
+            System.out.printf("[%d] ", node.value);
+            traverseinOrder(node.right);
+        }
+    }
+
+    public void traversePostOrder(Node node) { // izquierda, derech, raiz
+        if (node != null) {
+            traversePostOrder(node.left);
+            traversePostOrder(node.right);
+            System.out.printf("[%d] ", node.value);
+        }
     }
 
 }
