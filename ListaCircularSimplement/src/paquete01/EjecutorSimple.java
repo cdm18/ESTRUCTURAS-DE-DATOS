@@ -18,29 +18,24 @@ public class EjecutorSimple {
         lista.add(10);
         lista.add(30);
         lista.add(63);
-        
+
         lista.print();
         System.out.println(lista.head);
         System.out.println(lista.head.next.data);
 
         System.out.println(lista.tail);
         System.out.println(lista.tail.next);
-        
+
         System.out.println("\n");
-        
-        
-         
+
         lista.delete(lista, 1);
-        
-        
+
         System.out.println(lista.head.next.data);
 
-        
         lista.print();
         System.out.println(lista.tail);
         System.out.println(lista.tail.next);
-        
-        
+
         lista.print();
 
     }

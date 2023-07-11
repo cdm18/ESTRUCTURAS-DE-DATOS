@@ -58,7 +58,7 @@ public class ListaCircularSimplementeEnlazada {
             list.head = currentNode.next;
             currentNode.next = null;
             tail.next = head;
-            
+
             System.out.println(key + " (head) found and deleted");
             return list;
 
